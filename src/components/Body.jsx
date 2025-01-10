@@ -108,6 +108,7 @@ function Body() {
 
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
                 <img src={cafe} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                {/*  */}
                 <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Carrer Cafe</h2>
                 <p className="mb-4 text-black text-center">Chill and connect with your Friends.......</p>
                 <a href="https://chatapp-rhyv.onrender.com/" target="_blank" rel="noopener noreferrer">

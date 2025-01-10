@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Google Generative AI configuration
-genai.configure(api_key="AIzaSyD4_95c4fzqYvn0f-wo6yAKZJpnGnX0qIQ")
+genai.configure(api_key="AIzaSyAMZ7sJlD2ZlUyqObwLOZgJ9BGneYATG2o")
 
 generation_config = {
     "temperature": 1,
@@ -40,4 +40,4 @@ def chat():
     return jsonify({"response": "No input received."})
 
 if __name__ == "__main__":
-    app.run(host="localhost",port=3000,debug=True)
+    app.run(host="localhost",port=5000,debug=True)
