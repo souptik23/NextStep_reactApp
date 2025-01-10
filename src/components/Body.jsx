@@ -74,13 +74,19 @@ function Body() {
         <nav>{<Navbar />}</nav>
         <div>{<Slider />}</div>
         <div id="services" 
-          className="py-8 text-white font-sans mr-7 mt-20 flex justify-center items-center bg-cover bg-center bg-fixed"
+          className="py-8 text-white font-sans mr-7 mt-20 flex justify-center items-center bg-cover bg-center bg-fixed relative min-h-screen"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+            backgroundAttachment: 'fixed'
           }}>
-          <div className="px-2 mx-auto max-w-full w-full">
-            <h1 className="text-5xl text-white font-bold mb-5 text-center">Explore Our Categories</h1>
-            <p className="text-white mb-8 text-center font-serif">Discover your passion</p>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
+          <div className="px-2 mx-auto max-w-full w-full relative z-10">
+            <h1 className="text-6xl text-white font-bold mb-5 text-center animate-fade-in-down">
+              Explore Our Categories
+            </h1>
+            <p className="text-white mb-12 text-center font-serif text-xl italic">
+              Discover your passion and shape your future
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
                 <img src={ai} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />

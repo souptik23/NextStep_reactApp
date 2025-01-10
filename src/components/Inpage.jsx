@@ -3,8 +3,14 @@ import inpageimg from './allimages/sfhewjgf.jpg';
 
 function OnlineDegree() {
   return (
-    <div className="bg-white font-sans m-0 p-0 mr-20 mt-20 ml-20 ">
-      <div className="max-w-5xl mx-auto p-5 flex flex-col md:flex-row justify-between items-start">
+    <div className="font-sans m-0 p-0 mr-20 mt-20 ml-20 relative">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-white to-pink-50 opacity-90 rounded-lg"></div>
+      
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-pink-100/30 via-purple-100/20 to-pink-50/30 animate-gradient-xy rounded-lg"></div>
+      
+      <div className="max-w-5xl mx-auto p-5 flex flex-col md:flex-row justify-between items-start relative z-10">
         <div className="w-full md:w-3/5 mr-20">
           <p className="text-base text-gray-600 mb-1">CAREER GUIDANCE</p>
           <h1 className="text-4xl font-bold leading-tight mb-4 text-gray-700">
@@ -23,7 +29,7 @@ function OnlineDegree() {
           </div>
         </div>
         <div className="w-full md:w-2/5 mt-5 md:mt-0 ">
-          <img src={inpageimg} alt="Image" className="w-full h-auto object-cover rounded-lg" />
+          <img src={inpageimg} alt="Image" className="w-full h-auto object-cover rounded-lg shadow-lg" />
         </div>
       </div>
     </div>

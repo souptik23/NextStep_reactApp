@@ -2,44 +2,13 @@ import React from "react";
 import Fotter from "./Fotter";
 import { Link } from "react-router-dom";
 
+
+
+// the landing page
 const NextStep = () => {
   return (
     <div>
-      {/* <header className="text-white bg-white body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <span className="ml-3 text-xl text-gray-700 font-bold">NextStep</span>
-          </a>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 text-gray-800 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Features
-            </a>
-            <a className="mr-5 text-gray-800 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Partners
-            </a>
-            <a className="mr-5 text-gray-800 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              About Us
-            </a>
-            <a className="mr-5 text-gray-800 hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Contact Us
-            </a>
-          </nav>
-          <button className="inline-flex items-center text-black bg-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
-            Login
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-4 h-4 ml-1"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </header> */}
+     
       <header className="fixed top-0 left-0 w-full text-white bg-white body-font shadow-md z-10">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
