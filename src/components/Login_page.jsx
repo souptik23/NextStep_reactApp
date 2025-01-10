@@ -15,7 +15,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    if (email === "suddhasattwadas@gmail.com" && password === "1234") {
+    if (email === "sankhadeepk13@gmail.com" && password === "1234") {
       setShowAlert(true); // Show custom alert
       setTimeout(() => {
         setShowAlert(false); // Hide alert after 2 seconds
