@@ -7,7 +7,6 @@ import livementor from './allimages/connect.jpg';
 import Navbar from './Navbar';
 import Slider from './Slider';
 import Inpage from './Inpage';
-import slider from './Slider';
 import Inpage2 from './Inpage2';
 import Inpage3 from './Inpage3';
 import Fotter from './Fotter';
@@ -81,62 +80,61 @@ function Body() {
           }}>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
           <div className="px-2 mx-auto max-w-full w-full relative z-10">
-            <h1 className="text-6xl text-white font-bold mb-5 text-center animate-fade-in-down">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-5 text-center animate-fade-in-down">
               Explore Our Categories
             </h1>
-            <p className="text-white mb-12 text-center font-serif text-xl italic">
+            <p className="text-white mb-12 text-center font-serif text-lg md:text-xl lg:text-2xl italic">
               Discover your passion and shape your future
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
-                <img src={ai} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
-                <h2 className="text-2xl mb-2 text-gray-700 text-center font-bold">AI Powered Career</h2>
-                <p className="mb-4 text-black text-center">Enhance your carrer with our trained AI</p>
-                <button className="text-sm text-black font-serif block mx-auto">Know More</button>
-                <img src={arrow} className="w-4 h-4 mx-auto mt-2" />
+                <img src={ai} alt="img" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl mb-2 text-gray-700 text-center font-bold">AI Powered Career</h2>
+                <p className="mb-4 text-black text-center text-sm md:text-base lg:text-lg">Enhance your career with our trained AI</p>
+                <button className="text-xs md:text-sm lg:text-base text-black font-serif block mx-auto">Know More</button>
+                <img src={arrow} className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mx-auto mt-2" />
               </div>
 
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
-                <img src={livementor} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
-                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Live Career</h2>
-                <p className="mb-4 text-black text-center">Recent job market Trend Analysis.......</p>
-                <button className="text-sm text-black font-serif block mx-auto">Know More</button>
-                <img src={arrow} className="w-4 h-4 mx-auto mt-2" />
+                <img src={livementor} alt="img" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-gray-700 text-center">Live Career</h2>
+                <p className="mb-4 text-black text-center text-sm md:text-base lg:text-lg">Recent job market Trend Analysis.......</p>
+                <button className="text-xs md:text-sm lg:text-base text-black font-serif block mx-auto">Know More</button>
+                <img src={arrow} className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mx-auto mt-2" />
               </div>
 
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
-                <img src={vr} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
-                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">VR</h2>
-                <p className="mb-4 text-black text-center">Services description to be written.............</p>
-                <button className="text-sm text-black font-serif block mx-auto">Know More</button>
-                <img src={arrow} className="w-4 h-4 mx-auto mt-2" />
+                <img src={vr} alt="img" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-gray-700 text-center">VR</h2>
+                <p className="mb-4 text-black text-center text-sm md:text-base lg:text-lg">Services description to be written.............</p>
+                <button className="text-xs md:text-sm lg:text-base text-black font-serif block mx-auto">Know More</button>
+                <img src={arrow} className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mx-auto mt-2" />
               </div>
 
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
-                <img src={cafe} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
-                {/*  */}
-                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Carrer Cafe</h2>
-                <p className="mb-4 text-black text-center">Chill and connect with your Friends.......</p>
+                <img src={cafe} alt="img" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-gray-700 text-center">Career Cafe</h2>
+                <p className="mb-4 text-black text-center text-sm md:text-base lg:text-lg">Chill and connect with your Friends.......</p>
                 <a href="https://chatapp-rhyv.onrender.com/" target="_blank" rel="noopener noreferrer">
-                  <button className="text-sm text-black font-serif block mx-auto">Know More</button>
+                  <button className="text-xs md:text-sm lg:text-base text-black font-serif block mx-auto">Know More</button>
                 </a>
-                <img src={arrow} className="w-4 h-4 mx-auto mt-2" />
+                <img src={arrow} className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mx-auto mt-2" />
               </div>
 
-              <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2 col-start-2">
-                <img src={mentor} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
-                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Mentor Connect</h2>
-                <p className="mb-4 text-black text-center">Connect with our experienced Mentor</p>
-                <button className="text-sm text-black font-serif block mx-auto">Know More</button>
-                <img src={arrow} className="w-4 h-4 mx-auto mt-2" />
+              <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2 col-start-1 sm:col-start-2">
+                <img src={mentor} alt="img" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-gray-700 text-center">Mentor Connect</h2>
+                <p className="mb-4 text-black text-center text-sm md:text-base lg:text-lg">Connect with our experienced Mentor</p>
+                <button className="text-xs md:text-sm lg:text-base text-black font-serif block mx-auto">Know More</button>
+                <img src={arrow} className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mx-auto mt-2" />
               </div>
 
               <div className="bg-slate-100 p-4 rounded-lg transition-transform hover:bg-gradient-to-r from-blue-400 via-pink-400 to-red-400 hover:translate-y-[-9px] border-2">
-                <img src={dream} alt="img" className="w-24 h-24 mb-4 rounded-full object-cover mx-auto border-2" />
-                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Entrepreneurship</h2>
-                <p className="mb-4 text-black text-center">Learn how to startyour own business</p>
-                <button className="text-sm text-black font-serif block mx-auto">Know More</button>
-                <img src={arrow} className="w-4 h-4 mx-auto mt-2" />
+                <img src={dream} alt="img" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mb-4 rounded-full object-cover mx-auto border-2" />
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-gray-700 text-center">Entrepreneurship</h2>
+                <p className="mb-4 text-black text-center text-sm md:text-base lg:text-lg">Learn how to start your own business</p>
+                <button className="text-xs md:text-sm lg:text-base text-black font-serif block mx-auto">Know More</button>
+                <img src={arrow} className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mx-auto mt-2" />
               </div>
             </div>
           </div>
