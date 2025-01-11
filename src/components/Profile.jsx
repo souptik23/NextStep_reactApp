@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Chart } from 'chart.js/auto';
 import Navbar from './Navbar';
 
@@ -6,6 +6,7 @@ const CareerCounselingProfile = () => {
   const skillsChartRef = useRef(null);
   const progressChartRef = useRef(null);
   const streakChartRef = useRef(null);
+  const [showFullImage, setShowFullImage] = useState(false);
 
   useEffect(() => {
     // Destroy existing charts if they exist
@@ -144,12 +145,25 @@ const CareerCounselingProfile = () => {
           <div className="space-y-8">
             {/* Profile Card */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-[1.02] duration-300">
-              <div className="bg-gradient-to-r from-indigo-600 to-blue-500 text-center p-8">
-                <img
-                  className="w-32 h-32 rounded-full mx-auto border-4 border-white object-cover shadow-lg transform transition hover:rotate-6 duration-300"
-                  src=""
-                  alt="student dp"
-                />
+              <div className="bg-gradient-to-r from-indigo-600 to-blue-500 text-center p-8 relative">
+                <div className="relative">
+                  <img
+                    className="w-32 h-32 rounded-full mx-auto border-4 border-white object-cover shadow-lg transform transition hover:rotate-6 duration-300 cursor-pointer"
+                    src="/img/suddha.jpg"
+                    alt="student dp"
+                    onMouseEnter={() => setShowFullImage(true)}
+                    onMouseLeave={() => setShowFullImage(false)}
+                  />
+                  {showFullImage && (
+                    <div className="absolute z-50 left-1/2 transform -translate-x-1/2 top-full mt-4">
+                      <img 
+                        src="/img/suddha.jpg" 
+                        alt="Full size profile"
+                        className="w-64 h-64 object-cover rounded-lg shadow-2xl border-4 border-white"
+                      />
+                    </div>
+                  )}
+                </div>
                 <h3 className="text-white text-2xl font-bold mt-4">Suddhasatwa Das</h3>
                 <p className="text-blue-100 mt-2">Aspiring Software Engineer</p>
               </div>
