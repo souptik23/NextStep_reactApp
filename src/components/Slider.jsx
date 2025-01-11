@@ -2,18 +2,18 @@ import React from 'react';
 
 const LandingPage = () => {
   return (
-    <section className="h-screen flex justify-between items-center px-20 relative overflow-hidden">
+    <section className="h-screen flex justify-between items-center px-20 relative overflow-hidden animate-fadeIn">
       {/* Background layers */}
       <div className="absolute inset-0 z-0">
         {/* Multi-layered gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-50 to-orange-100 opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-50 to-orange-100 opacity-90 animate-pulse"></div>
         
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-pink-100/30 via-blue-200/20 to-emerald-100/30 animate-gradient-xy"></div>
 
         {/* Radial gradient accents */}
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-300/20 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-orange-200/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-300/20 to-transparent rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-orange-200/20 to-transparent rounded-full blur-3xl animate-float-delayed"></div>
         
         {/* Primary texture pattern */}
         <div className="absolute inset-0" style={{
@@ -28,14 +28,14 @@ const LandingPage = () => {
         }}></div>
         
         {/* Decorative elements with varied sizes and opacities */}
-        <div className="absolute top-10 -right-20 w-1/3 h-1/3 opacity-80">
+        <div className="absolute top-10 -right-20 w-1/3 h-1/3 opacity-80 animate-float">
           <img 
             src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" 
             alt="Code"
             className="w-full h-full object-contain"
           />
         </div>
-        <div className="absolute bottom-0 left-0 w-1/4 h-1/4 opacity-50">
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/4 opacity-50 animate-float-delayed">
           <img 
             src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png"
             alt="Engineering"
@@ -44,7 +44,7 @@ const LandingPage = () => {
         </div>
         
         {/* topi : ) */}
-        <div className="absolute top-5 left-0 w-1/3 h-1/3 opacity-55">
+        <div className="absolute top-5 left-0 w-1/3 h-1/3 opacity-55 animate-float">
           <img
             src="https://cdn-icons-png.flaticon.com/512/1940/1940611.png"
             alt="Education"
@@ -52,138 +52,159 @@ const LandingPage = () => {
           />
         </div>
         
+        {/* Floating gold coins animation */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(10)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute animate-float-coin"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            >
+              <img 
+                src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png"
+                alt="Gold Coin"
+                className="w-8 h-8 opacity-70"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Rest of the content remains exactly the same */}
       {/* Content section */}
-      <div className="w-full max-w-2xl text-left bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl shadow-slate-500 z-10">
-        <h1 className="text-4xl text-gray-700 font-bold mb-6">
-          Supercharge your career with
+      <div className="w-full max-w-2xl text-left bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl shadow-slate-500 z-10 hover:scale-105 transition-transform duration-300">
+        <h1 className="text-4xl text-gray-700 font-bold mb-6 animate-fadeInUp">
+          Make Your Roadmap With
           <div className='mt-4'>
-            <span className="font-serif text-blue-500 italic">Long Term Mentorship</span>
+            <span className="font-serif text-blue-500 italic">Our AI-Powered Platform</span>
           </div>
         </h1>
-        <p className="text-lg text-gray-700 mb-6">
-          Land your dream job, role, and company faster than ever with 1:1 long-term mentorship.
+        <p className="text-lg text-gray-700 mb-6 animate-fadeInUp" style={{animationDelay: '0.2s'}}>
+          Get a personalized learning path tailored to your career goals using advanced AI technology.
         </p>
 
         <div className="mb-6">
-          <a href="#" className="inline-block px-6 py-3 m-2 text-lg font-bold bg-white text-black border border-gray-300 rounded-md hover:bg-gray-100 hover:text-blue-500 hover:border-blue-500 hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg">
-            Book a Free Trial
+          <a href="#" className="inline-block px-6 py-3 m-2 text-lg font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md hover:from-blue-600 hover:to-purple-700 hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg animate-pulse">
+            Generate Your Roadmap with AI
           </a>
           <a href="#" className="inline-block px-6 py-3 m-2 text-lg font-bold bg-gray-700 text-white rounded-md hover:bg-blue-500 hover:text-white hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg">
-            Find your Mentor &gt;
+            Update with Recent Job Market
           </a>
         </div>
 
-        <div className="text-lg text-gray-600 flex space-x-8">
-          <span className="flex items-center text-blue-500">
+        <div className="text-lg text-gray-600 flex space-x-8 mb-4">
+          <span className="flex items-center text-blue-500 animate-bounce">
             <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" clipRule="evenodd" d="M10.501 1.667a8.333 8.333 0 1 0 0 16.667 8.333 8.333 0 0 0 0-16.667Zm3.145 6.778a.833.833 0 0 0-1.29-1.056L9.19 11.26l-1.015-1.016a.833.833 0 0 0-1.179 1.179l1.667 1.667a.833.833 0 0 0 1.234-.062l3.75-4.583Z" fill="#3C9AFF" />
             </svg> 
-            No Payment Required
+            AI-Powered Analysis
           </span>
-          <span className="flex items-center text-blue-500">
+          <span className="flex items-center text-blue-500 animate-bounce" style={{animationDelay: '0.1s'}}>
             <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" clipRule="evenodd" d="M10.501 1.667a8.333 8.333 0 1 0 0 16.667 8.333 8.333 0 0 0 0-16.667Zm3.145 6.778a.833.833 0 0 0-1.29-1.056L9.19 11.26l-1.015-1.016a.833.833 0 0 0-1.179 1.179l1.667 1.667a.833.833 0 0 0 1.234-.062l3.75-4.583Z" fill="#3C9AFF" />
             </svg> 
-            Verified Mentors Only
+            Real-time Updates
           </span>
-          <span className="flex items-center text-blue-500">
+          <span className="flex items-center text-blue-500 animate-bounce" style={{animationDelay: '0.2s'}}>
             <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" clipRule="evenodd" d="M10.501 1.667a8.333 8.333 0 1 0 0 16.667 8.333 8.333 0 0 0 0-16.667Zm3.145 6.778a.833.833 0 0 0-1.29-1.056L9.19 11.26l-1.015-1.016a.833.833 0 0 0-1.179 1.179l1.667 1.667a.833.833 0 0 0 1.234-.062l3.75-4.583Z" fill="#3C9AFF" />
             </svg> 
-            24/7 Support
+            Market Insights
           </span>
         </div>
+
+        <a 
+          href="https://souptik23.github.io/EY_FutureMind_V1/pricingPage.html" 
+          className="block text-lg text-yellow-600 italic text-center font-semibold hover:text-yellow-500 transition-colors duration-300 relative group animate-pulse"
+        >
+          <span className="absolute -left-6 top-1/2 transform -translate-y-1/2 animate-spin">
+            <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="coin" className="w-5 h-5"/>
+          </span>
+          🌟 Unlock more powerful features with our premium subscription
+          <span className="absolute -right-6 top-1/2 transform -translate-y-1/2 animate-spin">
+            <img src="https://cdn-icons-png.flaticon.com/512/2933/2933116.png" alt="coin" className="w-5 h-5"/>
+          </span>
+        </a>
       </div>
 
       {/* Right Section - Course Cards */}
       <div className="w-full max-w-2xl z-10">
-        <h2 className="text-2xl font-bold text-gray-700 mb-6 text-center">Recommended Courses</h2>
+        <h2 className="text-2xl font-bold text-gray-700 mb-6 text-center animate-fadeInUp">Recommended Courses</h2>
         <div className="grid grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-4">
           {/* Course Card 1 */}
-          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="h-28 bg-blue-100 rounded-lg mb-3 overflow-hidden">
-              <img src="https://cdn-icons-png.flaticon.com/256/1803/1803765.png" alt="Frontend Development" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Frontend Development</h3>
-            <p className="text-sm text-gray-600 mb-3">Master React, HTML, CSS and modern frontend frameworks</p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+            <img src="https://img.freepik.com/free-vector/webpage-template-with-code_24908-78070.jpg" alt="HTML Course" className="w-full h-32 object-cover rounded-lg mb-4"/>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">HTML5 Mastery</h3>
+            <p className="text-sm text-gray-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Master modern HTML5 features and semantic markup.</p>
             <div className="flex justify-between items-center">
-              <span className="text-blue-500 font-bold">$99</span>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600">Enroll Now</button>
+              <span className="text-blue-500 font-bold">₹799</span>
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Enroll Now</button>
             </div>
           </div>
 
           {/* Course Card 2 */}
-          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="h-28 bg-green-100 rounded-lg mb-3 overflow-hidden">
-              <img src="https://cdn-icons-png.flaticon.com/256/2721/2721304.png" alt="Backend Development" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Backend Development</h3>
-            <p className="text-sm text-gray-600 mb-3">Learn Node.js, Express and Database Management</p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/creative-css3-tutorials.jpg" alt="CSS Course" className="w-full h-32 object-cover rounded-lg mb-4"/>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">CSS3 & Animations</h3>
+            <p className="text-sm text-gray-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Learn advanced CSS3 styling and animations.</p>
             <div className="flex justify-between items-center">
-              <span className="text-blue-500 font-bold">$149</span>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600">Enroll Now</button>
+              <span className="text-blue-500 font-bold">₹899</span>
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Enroll Now</button>
             </div>
           </div>
 
           {/* Course Card 3 */}
-          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="h-28 bg-purple-100 rounded-lg mb-3 overflow-hidden">
-              <img src="https://cdn-icons-png.flaticon.com/256/6062/6062646.png" alt="Full Stack Development" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Full Stack Development</h3>
-            <p className="text-sm text-gray-600 mb-3">Become a complete web developer with MERN stack</p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+            <img src="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept-bright-vibrant-violet-isolated-illustration_335657-986.jpg" alt="JavaScript Course" className="w-full h-32 object-cover rounded-lg mb-4"/>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">JavaScript Fundamentals</h3>
+            <p className="text-sm text-gray-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Build a strong foundation in modern JavaScript.</p>
             <div className="flex justify-between items-center">
-              <span className="text-blue-500 font-bold">$199</span>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600">Enroll Now</button>
+              <span className="text-blue-500 font-bold">₹1499</span>
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Enroll Now</button>
             </div>
           </div>
 
           {/* Course Card 4 */}
-          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="h-28 bg-yellow-100 rounded-lg mb-3 overflow-hidden">
-              <img src="https://cdn-icons-png.flaticon.com/256/1688/1688400.png" alt="Web Security" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Web Security</h3>
-            <p className="text-sm text-gray-600 mb-3">Learn web security best practices and implementation</p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+            <img src="https://media.licdn.com/dms/image/v2/D4E12AQG1PxZ73PEBSw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1708668303539?e=2147483647&v=beta&t=QZ6IviSc6wyLpBOJAdbf97iYHddRto31uZEj6kaP8BY" alt="MERN Course" className="w-full h-32 object-cover rounded-lg mb-4"/>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">MERN Stack Development</h3>
+            <p className="text-sm text-gray-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Full-stack development with MongoDB, Express, React & Node.</p>
             <div className="flex justify-between items-center">
-              <span className="text-blue-500 font-bold">$179</span>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600">Enroll Now</button>
+              <span className="text-blue-500 font-bold">₹2999</span>
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Enroll Now</button>
             </div>
           </div>
 
           {/* Course Card 5 */}
-          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="h-28 bg-red-100 rounded-lg mb-3 overflow-hidden">
-              <img src="https://cdn-icons-png.flaticon.com/256/1995/1995581.png" alt="Data Science" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Data Science</h3>
-            <p className="text-sm text-gray-600 mb-3">Learn Python, Machine Learning, and Data Analysis</p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+            <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="React Course" className="w-full h-32 object-cover rounded-lg mb-4"/>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">React.js Advanced</h3>
+            <p className="text-sm text-gray-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Master React hooks, context API, and advanced patterns.</p>
             <div className="flex justify-between items-center">
-              <span className="text-blue-500 font-bold">$199</span>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600">Enroll Now</button>
+              <span className="text-blue-500 font-bold">₹1999</span>
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Enroll Now</button>
             </div>
           </div>
 
           {/* Course Card 6 */}
-          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="h-28 bg-pink-100 rounded-lg mb-3 overflow-hidden">
-              <img src="https://cdn-icons-png.flaticon.com/256/1995/1995590.png" alt="AI and ML" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">AI and ML</h3>
-            <p className="text-sm text-gray-600 mb-3">Master Artificial Intelligence and Machine Learning</p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group">
+            <img src="https://img.freepik.com/free-vector/flat-design-api-illustration_23-2149380374.jpg" alt="API Course" className="w-full h-32 object-cover rounded-lg mb-4"/>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">API Development</h3>
+            <p className="text-sm text-gray-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">Learn RESTful API design and implementation.</p>
             <div className="flex justify-between items-center">
-              <span className="text-blue-500 font-bold">$249</span>
-              <button className="px-3 py-1.5 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600">Enroll Now</button>
+              <span className="text-blue-500 font-bold">₹1599</span>
+              <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Enroll Now</button>
             </div>
           </div>
         </div>
 
         {/* Explore More Button */}
         <div className="text-center mt-6">
-          <button className="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg animate-bounce">
             Explore More Courses
           </button>
         </div>
